@@ -2,9 +2,11 @@
 
 BOOTSTRAP="http://bootstrap.herokuapp.com"
 FONTS="git://github.com/FortAwesome/Font-Awesome.git"
+
 CSS_NO_ICONS='["reset.less", "scaffolding.less", "grid.less", "layouts.less", "type.less", "code.less", "labels-badges.less", "tables.less", "forms.less", "buttons.less", "sprites.less", "button-groups.less", "navs.less", "navbar.less", "breadcrumbs.less", "pagination.less", "pager.less", "thumbnails.less", "alerts.less", "progress-bars.less", "hero-unit.less", "tooltip.less", "popovers.less", "modals.less", "dropdowns.less", "accordion.less", "carousel.less", "wells.less", "close.less", "utilities.less", "component-animations.less", "responsive-utilities.less", "responsive-767px-max.less", "responsive-768px-979px.less", "responsive-1200px-min.less", "responsive-navbar.less"]'
 JS='["bootstrap-transition.js", "bootstrap-modal.js", "bootstrap-dropdown.js", "bootstrap-scrollspy.js", "bootstrap-tab.js", "bootstrap-tooltip.js", "bootstrap-popover.js", "bootstrap-affix.js", "bootstrap-alert.js", "bootstrap-button.js", "bootstrap-collapse.js", "bootstrap-carousel.js", "bootstrap-typeahead.js"]'
 
+BASEDIR=$(dirname $0)
 THEME_DIR=$1
 
 # Get customized bootstrap
@@ -45,7 +47,7 @@ getBootstrap
 getFontAwesome
 
 mkdir "$THEME_DIR/img"
-cp index.html $THEME_DIR/index.html
+cp $BASEDIR/index.html $THEME_DIR/index.html
 
 echo ""
 echo ""
